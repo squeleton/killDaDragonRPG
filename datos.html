@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <h1>Datos Almacenados:</h1>
+    <div id="results">
+    </div>
+    <script>
+        const resultado = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value,name) =>{
+            resultado.append(`${name}: ${value}`) //93
+            resultado.append(document.createElement('br'))
+        })
+    </script>
+
+    <h1>
+        GO <a href="index.html">BACK</a>
+    </h1>
+</body>
+</html>
